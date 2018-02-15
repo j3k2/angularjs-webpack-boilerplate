@@ -2,10 +2,13 @@
 
 <head>
   <title>angularjs-webpack-boilerplate</title>
+  <script src="dist/bundle.js"></script>
 </head>
 
 <body>
-  <script src="dist/bundle.js"></script>
+  <a ui-sref="hello" ui-sref-active="active">Hello</a>
+  <a ui-sref="about" ui-sref-active="active">About</a>
+  <ui-view></ui-view>
 </body>
 
 </html>

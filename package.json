@@ -8,10 +8,11 @@
     "start": "webpack-dev-server"
   },
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.15",
     "angular": "^1.6.9",
     "d3": "^4.13.0",
-    "lodash": "^4.17.5",
-    "ui-router": "^1.0.0-alpha.3"
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.5"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.18",
