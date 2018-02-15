@@ -1,5 +1,3 @@
-// import _ from 'lodash';
-// import d3 from 'd3';
 import angular from 'angular';
 import '@uirouter/angularjs';
 const APP_NAME = 'app';
