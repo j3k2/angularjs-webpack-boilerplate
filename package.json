@@ -1,7 +1,7 @@
 {
   "name": "angularjs-webpack-boilerplate",
   "version": "1.0.0",
-  "description": "boilerplate and best practices example for angular/webpack application",
+  "description": "boilerplate and best practices example for angular/webpack applications",
   "author": "johnkim512@gmail.com",
   "scripts": {
     "build": "webpack --config webpack.config.js",
@@ -13,9 +13,7 @@
     "d3": "^4.13.0",
     "html-loader": "^0.5.5",
     "jquery": "^3.3.1",
-    "lodash": "^4.17.5"
-  },
-  "devDependencies": {
+    "lodash": "^4.17.5",
     "clean-webpack-plugin": "^0.1.18",
     "express": "^4.16.2",
     "webpack": "^3.11.0",
