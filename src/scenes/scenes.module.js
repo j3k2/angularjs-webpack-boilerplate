@@ -1,7 +1,10 @@
 import angular from 'angular';
-const MODULE_NAME = 'scenes';
+import config from '../config/config.module.js';
 
-angular.module(MODULE_NAME, []);
+import aboutScene from './about/about.scene.js';
+import homeScene from './home/home.scene.js';
 
-require('./about/about.component.js');
-require('./home/home.component.js');
+export default angular.module(config.modules.scenes, [
+  aboutScene,
+  homeScene
+]).name;

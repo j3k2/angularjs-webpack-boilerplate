@@ -8,11 +8,14 @@
     "start": "webpack-dev-server"
   },
   "dependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
     "@uirouter/angularjs": "^1.0.15",
     "angular": "^1.6.9",
+    "babel-loader": "^8.0.0-beta.0",
+    "clean-webpack-plugin": "^0.1.18",
     "html-loader": "^0.5.5",
     "lodash": "^4.17.5",
-    "clean-webpack-plugin": "^0.1.18",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   }

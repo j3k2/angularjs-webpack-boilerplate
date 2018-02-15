@@ -1,9 +1,10 @@
 import angular from 'angular';
-const MODULE_NAME = 'components';
+import config from '../../config/config.module.js';
 import template from './navigation.tpl.html';
 
-angular
-  .module(MODULE_NAME)
+export default angular
+  .module(config.modules.app + '.component.navigation', [])
   .component('navigation', {
     template
-  });
+  })
+  .name;
