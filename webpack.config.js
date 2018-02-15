@@ -8,8 +8,20 @@ module.exports = {
     path: path.resolve(__dirname, './public/dist/'),
     publicPath: '/dist/'
   },
+  module: {
+    rules: [{
+      test: /\.html$/,
+      use: [ {
+        loader: 'html-loader',
+        options: {
+          minimize: true
+        }
+      }],
+    }]
+  },
   devServer: {
-    contentBase: './public/'
+    contentBase: './public/',
+    historyApiFallback: true
   },
   plugins: [
     new CleanWebpackPlugin(['./public/dist/'])

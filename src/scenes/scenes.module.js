@@ -3,5 +3,5 @@ const MODULE_NAME = 'scenes';
 
 angular.module(MODULE_NAME, []);
 
-require('./about.component.js');
-require('./hello.component.js');
+require('./about/about.component.js');
+require('./home/home.component.js');

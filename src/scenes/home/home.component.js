@@ -3,6 +3,6 @@ const MODULE_NAME = 'scenes';
 
 angular
   .module(MODULE_NAME)
-  .component('about', {
-    template: '<div>ABOUT HERE</div>'
+  .component('home', {
+    template: require('./home.tpl.html')
   });

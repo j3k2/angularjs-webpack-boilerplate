@@ -3,25 +3,29 @@
 import angular from 'angular';
 import '@uirouter/angularjs';
 const APP_NAME = 'app';
+
 import './scenes/scenes.module.js';
+import './components/components.module.js';
 
 angular
-  .module(APP_NAME, ['ui.router', 'scenes'])
-  .config(function($stateProvider) {
-    var helloState = {
-      name: 'hello',
+  .module(APP_NAME, ['ui.router', 'scenes', 'components'])
+  .config(function($stateProvider, $locationProvider) {
+    var homeState = {
+      name: 'home',
       url: '/',
-      component: 'hello'
-    }
+      component: 'home'
+    };
   
     var aboutState = {
       name: 'about',
       url: '/about',
       component: 'about'
-    }
+    };
   
-    $stateProvider.state(helloState);
+    $stateProvider.state(homeState);
     $stateProvider.state(aboutState);
+
+    $locationProvider.html5Mode(true);
   });
 
   angular.element(document).ready(() => {
