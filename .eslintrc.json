@@ -16,5 +16,8 @@
         "jasmine": true,
         "commonjs": true
     },
+    "rules": {
+        "no-console": 0
+    },
     "extends": "eslint:recommended"
 }

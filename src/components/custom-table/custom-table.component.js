@@ -14,10 +14,10 @@ export default angular
 
       users.getUsers()
         .then((result) => {
-          ctrl.users = result.data;
+          ctrl.users = result;
         })
         .catch((error) => {
-          ctrl.users = [error];
+          ctrl.users = error;     
         });
     }],
   })

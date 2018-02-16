@@ -5,5 +5,8 @@ export default {
   },
   api: {
     base: 'https://jsonplaceholder.typicode.com/',
+    resources: {
+      users: 'users/'
+    }
   },
 };

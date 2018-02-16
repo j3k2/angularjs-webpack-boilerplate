@@ -6,8 +6,9 @@ Examples are provided to illustrate best practices for structuring component-bas
 #### Development guidelines
 AngularJS specific guidelines for module dependencies:
 - All modules may have **config** modules as dependencies
-- **Components** may have **services** or other **components** as dependencies
-- **Scenes** may have **components** as dependencies
+- **Component** modules must have **services** registered on them directly
+- **Components** may have other **component** modules as dependencies
+- **Scene** modules may have **components** as dependencies
 - The **app** module is composed of **scenes** and global **components** (persistent site-wide menus, etc)
 #### Instructions
 - `npm install` to install node_modules
