@@ -10,5 +10,5 @@ AngularJS specific guidelines for module dependencies:
 - **Scenes** may have **components** as dependencies
 - The **app** module is composed of **scenes** and global **components** (persistent site-wide menus, etc)
 #### Instructions
-`npm install` to install node_modules
-`npm run start` to start app on development server (localhost:8080)
+- `npm install` to install node_modules
+- `npm run start` to start app on development server (localhost:8080)
