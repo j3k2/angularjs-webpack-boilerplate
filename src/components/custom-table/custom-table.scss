@@ -1,8 +1,10 @@
-custom-table table{
-  background: black;
-  color: white;
-  max-width: 50%;
-  td { 
-    padding: 10px;    
+custom-table {
+  table {
+    background: black;
+    color: white;
+    margin-right: 10px;
+    td { 
+      padding: 10px;    
+    }
   }
 }

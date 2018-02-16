@@ -1,12 +1,13 @@
-import angular from 'angular';
-import config from '../config/config.module.js';
+import config from '../config/config.module';
 
-export default angular.module(config.modules.app + '.service.users', [])
-  .factory('usersService', ['$http', function ($http) {
-    const resourceBase = 'users/';
+export default {
+  name: 'usersService',
+  factory: ['$http', function ($http) {
+    const resourceBase = 'usesrs/';
     return {
-      getUsers: function () {
+      getUsers() {
         return $http.get(config.api.base + resourceBase);
-      }
-    }
-  }]).name;
+      },
+    };
+  }]
+}

@@ -1,10 +1,10 @@
 import angular from 'angular';
-import config from '../../config/config.module.js';
+import config from '../../config/config.module';
 import template from './navigation.tpl.html';
 
 export default angular
-  .module(config.modules.app + '.component.navigation', [])
+  .module(`${config.modules.app}.component.navigation`, [])
   .component('navigation', {
-    template
+    template,
   })
   .name;

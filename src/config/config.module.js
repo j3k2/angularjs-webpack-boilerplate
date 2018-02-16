@@ -4,6 +4,6 @@ export default {
     scenes: 'app.scenes',
   },
   api: {
-    base: 'https://jsonplaceholder.typicode.com/'
-  }
-}
+    base: 'https://jsonplaceholder.typicode.com/',
+  },
+};

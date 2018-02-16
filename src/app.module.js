@@ -1,36 +1,36 @@
 import angular from 'angular';
 import '@uirouter/angularjs';
-import config from './config/config.module.js';
+import config from './config/config.module';
 
 // scenes and global components
-import scenes from './scenes/scenes.module.js';
-import navigation from './components/navigation/navigation.component.js';
+import scenes from './scenes/scenes.module';
+import navigation from './components/navigation/navigation.component';
 
 angular
   .module(config.modules.app, [
     'ui.router',
     scenes,
-    navigation
+    navigation,
   ])
-  .config(function($stateProvider, $locationProvider) {
-    var homeState = {
+  .config(($stateProvider, $locationProvider) => {
+    const homeState = {
       name: 'home',
       url: '/',
-      component: 'home'
+      component: 'home',
     };
-  
-    var usersState = {
+
+    const usersState = {
       name: 'users',
       url: '/users',
-      component: 'users'
+      component: 'users',
     };
-  
+
     $stateProvider.state(homeState);
     $stateProvider.state(usersState);
 
     $locationProvider.html5Mode(true);
   });
 
-  angular.element(document).ready(() => {
-    angular.bootstrap(document, [config.modules.app]);
-  });
+angular.element(document).ready(() => {
+  angular.bootstrap(document, [config.modules.app]);
+});

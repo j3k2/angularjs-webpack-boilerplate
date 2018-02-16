@@ -1,22 +1,24 @@
 import angular from 'angular';
-import config from '../../config/config.module.js';
+import config from '../../config/config.module';
 import template from './custom-table.tpl.html';
 import './custom-table.scss';
-import usersService from '../../services/users.service.js';
+import usersService from '../../services/users.service';
 
 export default angular
-  .module(config.modules.app + '.component.custom-table', [
-    usersService
-  ])
+  .module(`${config.modules.app}.component.custom-table`, [])
+  .factory(usersService.name, usersService.factory)
   .component('customTable', {
     template,
-    controller: ['usersService', function(usersService) {
-      var ctrl = this;
+    controller: [usersService.name, function (users) {
+      const ctrl = this;
 
-      usersService.getUsers()
-        .then(function(result){
+      users.getUsers()
+        .then((result) => {
           ctrl.users = result.data;
+        })
+        .catch((error) => {
+          ctrl.users = [error];
         });
-    }]
+    }],
   })
   .name;
