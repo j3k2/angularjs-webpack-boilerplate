@@ -1,7 +1,7 @@
 export default {
   modules: {
     app: 'app',
-    scenes: 'app.scenes',
+    pages: 'app.pages',
   },
   api: {
     base: 'https://jsonplaceholder.typicode.com/',

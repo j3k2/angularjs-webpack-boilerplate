@@ -1,15 +1,15 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-module.exports = {
+const merge = require('webpack-merge');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const commonConfig = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './public/dist/'),
     publicPath: '/dist/',
   },
-  devtool: 'eval-source-map',
   module: {
     rules: [{
       test: /\.js$/,
@@ -20,7 +20,7 @@ module.exports = {
           presets: ['@babel/preset-env'],
         },
       },
-      'eslint-loader'],
+        'eslint-loader'],
     },
     {
       test: /\.scss$/,
@@ -48,3 +48,22 @@ module.exports = {
     new ExtractTextPlugin('style.css'),
   ],
 };
+const devConfig = {
+  devtool: 'eval-source-map' // https://webpack.js.org/configuration/devtool/#devtool
+};
+const prodConfig = {
+  plugins: [
+    new UglifyJsPlugin()
+  ]
+};
+
+
+module.exports = env => {
+  if (env && (env.production || (env.NODE_ENV && env.NODE_ENV.indexOf('prod') > -1))) {
+    console.log('Using production config');
+    return merge(commonConfig, prodConfig);
+  } else {
+    console.log('Using development config');
+    return merge(commonConfig, devConfig);
+  }
+}

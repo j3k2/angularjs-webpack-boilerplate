@@ -1,5 +1,5 @@
 import angular from 'angular';
-import config from '../../config/config.module';
+import config from '../../config/global.config';
 import template from './navigation.tpl.html';
 
 export default angular

@@ -4,8 +4,8 @@
   "description": "boilerplate for angular/webpack applications",
   "author": "johnkim512@gmail.com",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server"
+    "build": "webpack --config webpack.config.js --env.production",
+    "start": "webpack-dev-server --env.local"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.40",
@@ -16,6 +16,7 @@
     "clean-webpack-plugin": "^0.1.18",
     "css-loader": "^0.28.9",
     "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-loader": "^1.9.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-loader": "^0.5.5",
@@ -23,8 +24,9 @@
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
+    "uglifyjs-webpack-plugin": "^1.2.0",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1",
-    "eslint-config-airbnb-base": "^12.1.0"
+    "webpack-merge": "^4.1.1"
   }
 }
