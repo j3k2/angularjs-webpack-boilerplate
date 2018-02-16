@@ -19,14 +19,14 @@ angular
       component: 'home'
     };
   
-    var aboutState = {
-      name: 'about',
-      url: '/about',
-      component: 'about'
+    var usersState = {
+      name: 'users',
+      url: '/users',
+      component: 'users'
     };
   
     $stateProvider.state(homeState);
-    $stateProvider.state(aboutState);
+    $stateProvider.state(usersState);
 
     $locationProvider.html5Mode(true);
   });
