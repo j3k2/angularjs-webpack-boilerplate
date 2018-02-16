@@ -8,8 +8,8 @@ Examples are provided to illustrate best practices for structuring a component-b
 Includes routing, XHR requests, and dev/prod builds (with linting, minification, and source maps).
 
 #### Development guidelines
-AngularJS specific guidelines for module dependencies:
-- All modules may have **config** objects as dependencies
+Guidelines specific to module/dependency system in AngularJS:
+- All modules may import **config** objects
 - **Services** may be registered directly on **component** modules
 - **Components** may have other **component** modules and **services** as dependencies
 - **Page** modules may have **components** as dependencies
