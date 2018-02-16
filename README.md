@@ -1,5 +1,5 @@
 # angularjs-webpack-boilerplate
-
+![](https://david-dm.org/jeikei/angular-webpack-boilerplate.svg)
 #### Overview
 The goal of this project is to provide boilerplate code that would be useful for creating a new project with AngularJS (1.6) and webpack (3.11).
 
