@@ -10,7 +10,7 @@ Includes routing, XHR requests, and dev/prod builds (with linting, minification,
 #### Development guidelines
 AngularJS specific guidelines for module dependencies:
 - All modules may have **config** objects as dependencies
-- **Component** modules must have **services** registered on them directly
+- **Services** may be registered directly on **component** modules
 - **Components** may have other **component** modules as dependencies
 - **Page** modules may have **components** as dependencies
 - The **app** module may have **pages** and global **components** (persistent site-wide menus, etc) as dependencies
