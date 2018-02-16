@@ -9,11 +9,11 @@ Includes routing, XHR requests, and dev/prod builds (with linting, minification,
 
 #### Development guidelines
 Guidelines specific to module/dependency system in AngularJS:
-- All modules may import **config** objects
-- **Services** may be registered directly on **component** modules
-- **Components** may have other **component** modules and **services** as dependencies
-- **Page** modules may have **components** as dependencies
-- The **app** module may have **pages** and global **components** (persistent site-wide menus, etc) as dependencies
+- **Config** objects may be imported into any file
+- **Services** may be registered on **component modules**
+- **Component modules** may have other **component modules** as dependencies
+- **Page modules** may have **component modules** as dependencies
+- The **app** module may have **page modules** and global **component modules** (persistent site-wide menus, etc) as dependencies
 
 #### Instructions
 - `npm install` to install node_modules
