@@ -5,15 +5,15 @@ The goal of this project is to provide boilerplate code that would be useful for
 
 Examples are provided to illustrate best practices for structuring a component-based workflow. 
 
-Includes routing, XHR requests, and dev/prod builds.
+Includes routing, XHR requests, and dev/prod builds (with linting, minification, and source maps).
 
 #### Development guidelines
 AngularJS specific guidelines for module dependencies:
-- All modules may have **config** modules as dependencies
+- All modules may have **config** objects as dependencies
 - **Component** modules must have **services** registered on them directly
 - **Components** may have other **component** modules as dependencies
 - **Page** modules may have **components** as dependencies
-- The **app** module is composed of **pages** and global **components** (persistent site-wide menus, etc)
+- The **app** module may have **pages** and global **components** (persistent site-wide menus, etc) as dependencies
 
 #### Instructions
 - `npm install` to install node_modules
