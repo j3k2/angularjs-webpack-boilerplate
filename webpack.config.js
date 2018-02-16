@@ -1,7 +1,8 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-export default {
+module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -20,6 +21,13 @@ export default {
       }
     },
     {
+      test: /\.scss$/,
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: ['css-loader', 'sass-loader']
+      })
+    },
+    {
       test: /\.html$/,
       use: [{
         loader: 'html-loader',
@@ -34,6 +42,7 @@ export default {
     historyApiFallback: true
   },
   plugins: [
-    new CleanWebpackPlugin(['./public/dist/'])
+    new CleanWebpackPlugin(['./public/dist/']),
+    new ExtractTextPlugin('style.css')
   ]
 };
