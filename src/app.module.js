@@ -12,7 +12,7 @@ angular
     scenes,
     navigation,
   ])
-  .config(($stateProvider, $locationProvider) => {
+  .config(['$stateProvider', '$locationProvider', ($stateProvider, $locationProvider) => {
     const homeState = {
       name: 'home',
       url: '/',
@@ -29,8 +29,8 @@ angular
     $stateProvider.state(usersState);
 
     $locationProvider.html5Mode(true);
-  });
+  }]);
 
 angular.element(document).ready(() => {
-  angular.bootstrap(document, [config.modules.app]);
+  angular.bootstrap(document, [config.modules.app], {strictDi: true});
 });

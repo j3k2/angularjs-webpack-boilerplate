@@ -2,7 +2,7 @@ import config from '../config/config.module';
 
 export default {
   name: 'usersService',
-  factory: ['$http', function ($http) {
+  factory: ['$http', ($http) => {
     var users;
 
     function getUsers() {
@@ -12,11 +12,11 @@ export default {
         })
       } else {
         return $http.get(config.api.base + config.api.resources.users)
-          .then(function (result) {
+          .then((result) => {
             users = result.data;
             return users;
           })
-          .catch(function (error) {
+          .catch((error) => {
             return error;
           });
       }
