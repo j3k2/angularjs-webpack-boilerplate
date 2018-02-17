@@ -6,7 +6,7 @@ The goal of this project is to provide boilerplate code that would be useful for
 Shout out to [angular/angular-seed](https://github.com/angular/angular-seed) and [orizen/echoes](https://github.com/orizens/echoes) for inspiration. 
 
 Features include:
-- ES6 support with `babel`
+- ES6 support with Babel
 - Routing with `ui-router`
 - XHR requests with `angular-local-storage` for local storage caching
 - Separate webpack builds for development/production (with linting, minification, and source maps)
