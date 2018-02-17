@@ -1,9 +1,8 @@
 import angular from 'angular';
 import template from './home.tpl.html';
-import config from '../../config/global.config';
 
 export default angular
-  .module(`${config.modules.pages}.home`, [])
+  .module('home.page', [])
   .component('home', {
     template,
   })

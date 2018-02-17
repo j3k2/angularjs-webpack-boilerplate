@@ -4,7 +4,7 @@ import './custom-table.scss';
 import usersService from '../../services/users.service';
 
 export default angular
-  .module('customTableModule', [])
+  .module('customTable.component', [])
   .factory(usersService.name, usersService.factory)
   .component('customTable', {
     template,

@@ -2,7 +2,7 @@ import angular from 'angular';
 import template from './navigation.tpl.html';
 
 export default angular
-  .module('navigationModule', [])
+  .module('navigation.component', [])
   .component('navigation', {
     template,
   })
