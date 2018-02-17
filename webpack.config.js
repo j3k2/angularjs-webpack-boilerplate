@@ -8,7 +8,7 @@ const commonConfig = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './public/dist/'),
-    publicPath: '/dist/',
+    publicPath: '/dist/'
   },
   module: {
     rules: [{
@@ -17,38 +17,38 @@ const commonConfig = {
       use: [{
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env'],
-        },
+          presets: ['@babel/preset-env']
+        }
       },
-        'eslint-loader'],
+        'eslint-loader']
     },
     {
       test: /\.scss$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: ['css-loader', 'sass-loader'],
-      }),
+        use: ['css-loader', 'sass-loader']
+      })
     },
     {
       test: /\.html$/,
       use: [{
         loader: 'html-loader',
         options: {
-          minimize: true,
-        },
-      }],
-    }],
-  },
-  devServer: {
-    contentBase: './public/',
-    historyApiFallback: true,
+          minimize: true
+        }
+      }]
+    }]
   },
   plugins: [
     new CleanWebpackPlugin(['./public/dist/']),
     new ExtractTextPlugin('style.css'),
-  ],
+  ]
 };
 const devConfig = {
+  devServer: {
+    contentBase: './public/',
+    historyApiFallback: true
+  },
   devtool: 'eval-source-map' // https://webpack.js.org/configuration/devtool/#devtool
 };
 const prodConfig = {
