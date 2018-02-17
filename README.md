@@ -8,7 +8,7 @@ Examples are provided to illustrate best practices for structuring a component-b
 Features include:
 - Routing with `ui-router`
 - XHR requests with `angular-local-storage` for local storage caching
-- Seperate webpack builds for development/production (with ES6 linting, minification, and source maps)
+- Separate webpack builds for development/production (with ES6 linting, minification, and source maps)
 
 #### Development guidelines
 Guidelines specific to module/dependency system in AngularJS:
