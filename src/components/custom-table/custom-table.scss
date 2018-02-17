@@ -1,7 +1,9 @@
+@import '../../common/styles/colors.scss';
+
 custom-table {
   table {
-    background: black;
-    color: white;
+    background: $dark;
+    color: $light;
     margin-right: 10px;
     td { 
       padding: 10px;    
