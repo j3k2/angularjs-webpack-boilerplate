@@ -19,6 +19,9 @@ Guidelines specific to module/dependency system in AngularJS:
 - The **app** module may have **page modules** and global **component modules** (persistent site-wide menus, etc) as dependencies
 
 #### Instructions
+
+- Start a new project without the repository's commit history:
+`git clone --depth=1 https://github.com/jeikei/angularjs-webpack-boilerplate.git <your-project-name>`
 - `npm install` to install node_modules
 - `npm run start` to start app on development server (localhost:8080)
 - `npm run build` to generate production build

@@ -4,7 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const merge = require('webpack-merge');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const commonConfig = {
-  entry: './src/index.js',
+  entry: './src/app.module.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './public/dist/'),
