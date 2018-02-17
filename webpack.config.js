@@ -12,17 +12,6 @@ const commonConfig = {
   },
   module: {
     rules: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: ['@babel/preset-env']
-        }
-      },
-        'eslint-loader']
-    },
-    {
       test: /\.scss$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
@@ -51,6 +40,21 @@ const commonConfig = {
   ]
 };
 const devConfig = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        },
+          'eslint-loader']
+      }
+    ]
+  },
   devServer: {
     contentBase: './public/',
     historyApiFallback: true
@@ -58,6 +62,20 @@ const devConfig = {
   devtool: 'eval-source-map' // https://webpack.js.org/configuration/devtool/#devtool
 };
 const prodConfig = {
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [{
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }]
+      }
+    ]
+  },
   plugins: [
     new UglifyJsPlugin()
   ]
