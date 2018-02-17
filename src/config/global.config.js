@@ -6,4 +6,9 @@ export default {
       users: 'users/'
     }
   },
+  stateUrls: {
+    // keys should match page component names
+    users: '/users',
+    home: '/'
+  }
 };

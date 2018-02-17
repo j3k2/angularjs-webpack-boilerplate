@@ -6,17 +6,17 @@ export default {
     function getUsers() {
       var users = localStorageService.get('users');
       if (users) {
-        return new Promise((resolve) => {
+        return new Promise(resolve => {
           resolve(users);
         });
       } else {
         return $http.get(config.api.base + config.api.resources.users)
-          .then((result) => {
+          .then(result => {
             users = result.data;
             localStorageService.set('users', users);
             return users;
           })
-          .catch((error) => {
+          .catch(error => {
             return error;
           });
       }

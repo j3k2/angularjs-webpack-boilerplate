@@ -4,32 +4,24 @@ import config from './config/global.config';
 import pages from './pages/pages.module';
 import globalComponents from './components/global-components.module';
 
-// external libs
 import '@uirouter/angularjs';
 import 'angular-local-storage';
 
 angular
   .module(config.appName, [
-    'ui.router',
-    'LocalStorageModule',
     pages,
-    globalComponents
+    globalComponents,
+    'ui.router',
+    'LocalStorageModule'
   ])
   .config(['$stateProvider', '$locationProvider', ($stateProvider, $locationProvider) => {
-    const homeState = {
-      name: 'home',
-      url: '/',
-      component: 'home',
-    };
-
-    const usersState = {
-      name: 'users',
-      url: '/users',
-      component: 'users',
-    };
-
-    $stateProvider.state(homeState);
-    $stateProvider.state(usersState);
+    Object.keys(config.stateUrls).forEach(stateKey => {
+      $stateProvider.state({
+        name: stateKey,
+        component: stateKey,
+        url: config.stateUrls[stateKey]
+      });
+    });
 
     $locationProvider.html5Mode(true);
   }]);

@@ -12,10 +12,10 @@ export default angular
       const ctrl = this;
 
       users.getUsers()
-        .then((result) => {
+        .then(result => {
           ctrl.users = result;
         })
-        .catch((error) => {
+        .catch(error => {
           ctrl.users = error;     
         });
     }],
