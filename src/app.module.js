@@ -1,20 +1,19 @@
 import angular from 'angular';
 import config from './config/global.config';
 
+import pages from './pages/pages.module';
+import globalComponents from './components/global-components.module';
+
 // external libs
 import '@uirouter/angularjs';
 import 'angular-local-storage';
 
-// pages and global components
-import pages from './pages/pages.module';
-import navigation from './components/navigation/navigation.component';
-
 angular
-  .module(config.modules.app, [
+  .module(config.appName, [
     'ui.router',
     'LocalStorageModule',
     pages,
-    navigation
+    globalComponents
   ])
   .config(['$stateProvider', '$locationProvider', ($stateProvider, $locationProvider) => {
     const homeState = {
@@ -36,5 +35,5 @@ angular
   }]);
 
 angular.element(document).ready(() => {
-  angular.bootstrap(document, [config.modules.app], { strictDi: true });
+  angular.bootstrap(document, [config.appName], { strictDi: true });
 });

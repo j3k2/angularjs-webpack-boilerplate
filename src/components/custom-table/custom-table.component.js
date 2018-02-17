@@ -1,11 +1,10 @@
 import angular from 'angular';
-import config from '../../config/global.config';
 import template from './custom-table.tpl.html';
 import './custom-table.scss';
 import usersService from '../../services/users.service';
 
 export default angular
-  .module(`${config.modules.app}.component.custom-table`, [])
+  .module('customTableModule', [])
   .factory(usersService.name, usersService.factory)
   .component('customTable', {
     template,

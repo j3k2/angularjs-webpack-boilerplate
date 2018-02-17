@@ -1,8 +1,5 @@
 export default {
-  modules: {
-    app: 'app',
-    pages: 'app.pages',
-  },
+  appName: 'app',
   api: {
     base: 'https://jsonplaceholder.typicode.com/',
     resources: {
