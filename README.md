@@ -16,7 +16,7 @@ Guidelines specific to module/dependency system in AngularJS:
 - **Services** may be registered on **component modules**
 - **Component modules** may have other **component modules** as dependencies
 - **Page modules** may have **component modules** as dependencies
-- The **app** module may have **page modules** and global **component modules** (persistent site-wide menus, etc) as dependencies
+- The **app** module may have **page modules** and common **component modules** (persistent site-wide menus, etc) as dependencies
 
 #### Instructions
 

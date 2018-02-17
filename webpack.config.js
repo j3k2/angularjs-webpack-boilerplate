@@ -37,6 +37,12 @@ const commonConfig = {
           minimize: true
         }
       }]
+    },
+    {
+      test: /\.(woff|woff2|eot|ttf|otf|png|svg|jpg|gif)$/,
+      use: [
+        'file-loader'
+      ]
     }]
   },
   plugins: [
