@@ -5,7 +5,9 @@
   "author": "johnkim512@gmail.com",
   "scripts": {
     "build": "webpack --config webpack.config.js --env.production",
-    "start": "webpack-dev-server --env.local"
+    "start": "webpack-dev-server --env.local",
+    "lint": "eslint src/",
+    "lint-fix": "eslint src/ --fix"
   },
   "dependencies": {
     "@babel/core": "^7.0.0-beta.40",
