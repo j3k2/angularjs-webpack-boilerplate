@@ -1,8 +1,8 @@
 import angular from 'angular';
-import config from './config/common.config';
+import config from './common/config';
 
-import pages from './pages/pages.module';
-import commonComponents from './common/common-components.module';
+import views from './views/views.module';
+import parentComponents from './components/parent-components.module';
 
 import '@uirouter/angularjs';
 import 'angular-local-storage';
@@ -11,8 +11,8 @@ import './common/app.scss';
 
 angular
   .module(config.appName, [
-    pages,
-    commonComponents,
+    views,
+    parentComponents,
     'ui.router',
     'LocalStorageModule'
   ])

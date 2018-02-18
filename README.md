@@ -14,11 +14,10 @@ Features include:
 
 #### Development guidelines
 Guidelines specific to module/dependency system in AngularJS:
-- **Config** objects may be imported into any file
 - **Services** may be registered on **component modules**
 - **Component modules** may have other **component modules** as dependencies
-- **Page modules** may have **component modules** as dependencies
-- The **app** module may have **page modules** and common **component modules** (persistent site-wide menus, etc) as dependencies
+- **View modules** may have **component modules** as dependencies
+- The **app** module may have **view modules** and parent **component modules** (components at the same level as `<ui-view>`, e.g., persistent menus) as dependencies
 
 #### Instructions
 

@@ -1,4 +1,4 @@
-import config from '../config/common.config';
+import config from '../common/config';
 
 export default {
   name: 'usersService',

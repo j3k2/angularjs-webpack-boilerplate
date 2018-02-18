@@ -7,7 +7,7 @@ export default {
     }
   },
   stateUrls: {
-    // keys should match page component names
+    // keys should match view component names
     users: '/users',
     home: '/'
   }
