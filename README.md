@@ -1,5 +1,4 @@
 # angularjs-webpack-boilerplate
-![](https://david-dm.org/jeikei/angular-webpack-boilerplate.svg)
 #### Overview
 The goal of this project is to provide boilerplate code that would be useful for creating a new web application with AngularJS (1.6) and webpack (3.11). Examples are provided to illustrate best practices for structuring a component-based workflow. 
 
