@@ -1,6 +1,6 @@
 # angularjs-webpack-boilerplate
 #### Overview
-The goal of this project is to provide boilerplate code that would be useful for creating a new web application with AngularJS (1.6) and webpack (3.11). Examples are provided to illustrate best practices for structuring a component-based workflow. 
+The goal of this project is to provide boilerplate code that would be useful for creating a new web application with AngularJS (1.6) and webpack (4.41). Examples are provided to illustrate best practices for structuring a component-based workflow. 
 
 Shout out to [angular/angular-seed](https://github.com/angular/angular-seed) and [orizen/echoes](https://github.com/orizens/echoes) for inspiration. 
 
@@ -22,6 +22,6 @@ Guidelines specific to module/dependency system in AngularJS:
 
 - Start a new project without the repository's commit history:
 `git clone --depth=1 https://github.com/jeikei/angularjs-webpack-boilerplate.git <your-project-name>`
-- `npm install` to install node_modules
+- `npm install` to install dependencies
 - `npm run start` to start app on development server (localhost:8080)
-- `npm run build` to generate production build
+- `npm run build` to generate production build in public/ directory.
