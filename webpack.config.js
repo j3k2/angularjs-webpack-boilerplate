@@ -1,6 +1,6 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const commonConfig = {
@@ -13,10 +13,7 @@ const commonConfig = {
   module: {
     rules: [{
       test: /\.scss$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: ['css-loader', 'sass-loader']
-      })
+      use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
     },
     {
       test: /\.html$/,
@@ -36,7 +33,9 @@ const commonConfig = {
   },
   plugins: [
     new CleanWebpackPlugin(['./public/dist/']),
-    new ExtractTextPlugin('style.css'),
+    new MiniCssExtractPlugin({
+      filename: 'style.css'
+    }),
   ]
 };
 const devConfig = {
