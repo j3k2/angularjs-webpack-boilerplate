@@ -9,7 +9,7 @@
     "url": "https://github.com/j3k2/angularjs-webpack-boilerplate.git"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js --env.production",
+    "build": "webpack --config webpack.config.js --env.production --mode=production",
     "start": "webpack-dev-server --env.local",
     "lint": "eslint src/",
     "lint-fix": "eslint src/ --fix"
