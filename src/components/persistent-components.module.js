@@ -4,7 +4,7 @@ import config from '../common/config';
 import navigation from './navigation/navigation.component';
 
 export default angular
-  .module(`${config.appName}.parentComponents`, [
+  .module(`${config.appName}.persistentComponentsr`, [
     navigation
   ])
   .name;

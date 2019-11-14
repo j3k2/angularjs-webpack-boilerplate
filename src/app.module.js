@@ -2,7 +2,7 @@ import angular from 'angular';
 import config from './common/config';
 
 import views from './views/views.module';
-import parentComponents from './components/parent-components.module';
+import persistentComponents from './components/persistent-components.module';
 
 import '@uirouter/angularjs';
 import 'angular-local-storage';
@@ -12,7 +12,7 @@ import './common/app.scss';
 angular
   .module(config.appName, [
     views,
-    parentComponents,
+    persistentComponents,
     'ui.router',
     'LocalStorageModule'
   ])

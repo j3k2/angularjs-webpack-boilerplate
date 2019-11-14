@@ -16,7 +16,7 @@ Guidelines specific to module/dependency system in AngularJS:
 - **Services** may be registered on **component modules**
 - **Component modules** may have other **component modules** as dependencies
 - **View modules** may have **component modules** as dependencies
-- The **app** module may have **view modules** and parent **component modules** (components at the same level as `<ui-view>`, e.g., persistent menus) as dependencies
+- The **app** module may have **view modules** and persistent **component modules** (components at the same level as ui-router's `<ui-view>` in public/index.html which don't change based on route e.g., navigation menus) as dependencies
 
 #### Instructions
 
