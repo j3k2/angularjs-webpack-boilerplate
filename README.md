@@ -21,7 +21,7 @@ Guidelines specific to module/dependency system in AngularJS:
 #### Instructions
 
 - Start a new project without the repository's commit history:
-`git clone --depth=1 https://github.com/jeikei/angularjs-webpack-boilerplate.git <your-project-name>`
+`git clone --depth=1 https://github.com/j3k2/angularjs-webpack-boilerplate.git <your-project-name>`
 - `npm install` to install dependencies
 - `npm run start` to start app on development server (localhost:8080)
 - `npm run build` to generate production build in public/ directory.
