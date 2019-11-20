@@ -18,7 +18,7 @@
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
     "@uirouter/angularjs": "^1.0.15",
-    "angular": "^1.6.9",
+    "angular": "^1.7.9",
     "angular-local-storage": "^0.7.1",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^0.1.18",
