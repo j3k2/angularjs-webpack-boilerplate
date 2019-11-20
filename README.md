@@ -1,6 +1,6 @@
 # angularjs-webpack-boilerplate
 #### Overview
-The goal of this project is to provide boilerplate code that would be useful for creating a new web application with AngularJS (1.6) and webpack (4.41). Examples are provided to illustrate best practices for structuring a component-based workflow. 
+The goal of this project is to provide boilerplate code that would be useful for creating a new web application with AngularJS (1.7) and webpack (4.41). Examples are provided to illustrate best practices for structuring a component-based workflow. 
 
 Shout out to [angular/angular-seed](https://github.com/angular/angular-seed) and [orizen/echoes](https://github.com/orizens/echoes) for inspiration. 
 
